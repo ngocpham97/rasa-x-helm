@@ -32,7 +32,7 @@ rasax:
   # initialUser is the user which is created upon the initial start of Rasa X
   initialUser:
     # username specifies a name of this user
-    username: "me"
+    username: ""
     # password for this user (leave it empty to skip the user creation)
     password: ""
   ## Enable persistence using Persistent Volume Claims
@@ -109,7 +109,7 @@ rasax:
 rasa:
   # version is the Rasa Open Source version which should be used.
   # Used to ensure backward compatibility with older Rasa Open Source versions.
-  version: "2.7.1"  # Please update the default value in the Readme when updating this
+  version: "2.7.2"  # Please update the default value in the Readme when updating this
   # disableTelemetry permanently disables telemetry
   disableTelemetry: false
   # override the default command to run in the container
@@ -119,9 +119,9 @@ rasa:
   # add extra arguments to the command in the container
   extraArgs: []
   # name of the Rasa image to use
-  name: "rasa/rasa"
+  name: "ngocpham97qt/rasa-vi"
   # tag refers to the Rasa image tag. If empty `.Values.rasa.version-full` is used.
-  tag: ""
+  tag: "1"
   # port on which Rasa runs
   port: 5005
   # scheme by which Rasa services are accessible
@@ -135,7 +135,7 @@ rasa:
   # additionalChannelCredentials which should be used by Rasa to connect to various
   # input channels
   additionalChannelCredentials: {}
-    # rest:
+    rest:
     # facebook:
     #   verify: "rasa-bot"
     #   secret: "3e34709d01ea89032asdebfe5a74518"
@@ -420,9 +420,9 @@ app:
   # override the default arguments to run in the container
   args: []
   # name of the custom action server image to use
-  name: "rasa/rasa-x-demo"
+  name: "ngocpham97qt/vnd-ai-nlp-chatbot"
   # tag refers to the custom action server image tag
-  tag: "0.38.0"
+  tag: "1"
   # replicaCount of the custom action server container
   replicaCount: 1
   # port on which the custom action server runs
